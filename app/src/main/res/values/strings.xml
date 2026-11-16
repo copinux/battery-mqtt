@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Battery MQTT</string>
+    <string name="settings_title">Paramètres MQTT</string>
+    <string name="label_broker">Adresse du broker</string>
+    <string name="hint_broker">ex. 192.168.1.10 ou test.mosquitto.org</string>
+    <string name="label_port">Port</string>
+    <string name="hint_port">1883</string>
+    <string name="label_topic">Topic MQTT</string>
+    <string name="hint_topic">battery/level</string>
+    <string name="label_user">Utilisateur</string>
+    <string name="label_password">Mot de passe</string>
+    <string name="hint_optional">facultatif</string>
+    <string name="button_start">Démarrer l\'envoi</string>
+    <string name="button_stop">Arrêter</string>
+    <string name="status_idle">Arrêté</string>
+    <string name="status_starting">Démarrage…</string>
+    <string name="status_stopped">Arrêté</string>
+    <string name="status_connecting">Connexion à %1$s…</string>
+    <string name="status_connected">Connecté à %1$s</string>
+    <string name="status_published">Batterie : %1$d %% (publié à %2$s)</string>
+    <string name="status_read_error">Impossible de lire le niveau de batterie</string>
+    <string name="status_error">Erreur : %1$s</string>
+    <string name="error_broker_required">Veuillez saisir l\'adresse du broker</string>
+    <string name="channel_name">Publication batterie</string>
+    <string name="notification_title">Battery MQTT</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/label_broker" />
+
+        <EditText
+            android:id="@+id/brokerInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_broker"
+            android:inputType="textUri"
+            android:autofillHints="" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/label_port" />
+
+        <EditText
+            android:id="@+id/portInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_port"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/label_topic" />
+
+        <EditText
+            android:id="@+id/topicInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_topic"
+            android:inputType="text"
+            android:autofillHints="" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/label_user" />
+
+        <EditText
+            android:id="@+id/userInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_optional"
+            android:inputType="text"
+            android:autofillHints="" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/label_password" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_optional"
+            android:inputType="textPassword"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/button_start" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/button_stop" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/status_idle"
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+    </LinearLayout>
+</ScrollView>
