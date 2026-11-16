@@ -22,6 +22,7 @@
     <string name="status_read_error">Impossible de lire le niveau de batterie</string>
     <string name="status_error">Erreur : %1$s</string>
     <string name="error_broker_required">Veuillez saisir l\'adresse du broker</string>
+    <string name="label_auto_start">Démarrer automatiquement quand le téléphone est en charge (et arrêter au débranchement)</string>
     <string name="channel_name">Publication batterie</string>
     <string name="notification_title">Battery MQTT</string>
 </resources>

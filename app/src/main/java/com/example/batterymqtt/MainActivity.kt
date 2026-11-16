@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var topicInput: EditText
     private lateinit var userInput: EditText
     private lateinit var passwordInput: EditText
+    private lateinit var autoStartCheck: android.widget.CheckBox
     private lateinit var statusText: TextView
     private lateinit var startButton: Button
     private lateinit var stopButton: Button
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         topicInput = findViewById(R.id.topicInput)
         userInput = findViewById(R.id.userInput)
         passwordInput = findViewById(R.id.passwordInput)
+        autoStartCheck = findViewById(R.id.autoStartCheck)
         statusText = findViewById(R.id.statusText)
         startButton = findViewById(R.id.startButton)
         stopButton = findViewById(R.id.stopButton)
@@ -71,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         topicInput.setText(prefs.getString(Prefs.KEY_TOPIC, "battery/level"))
         userInput.setText(prefs.getString(Prefs.KEY_USER, ""))
         passwordInput.setText(prefs.getString(Prefs.KEY_PASSWORD, ""))
+        autoStartCheck.isChecked = prefs.getBoolean(Prefs.KEY_AUTO_START, false)
     }
 
     private fun startPublishing() {
@@ -86,6 +89,7 @@ class MainActivity : AppCompatActivity() {
             .putString(Prefs.KEY_TOPIC, topicInput.text.toString().trim().ifEmpty { "battery/level" })
             .putString(Prefs.KEY_USER, userInput.text.toString().trim())
             .putString(Prefs.KEY_PASSWORD, passwordInput.text.toString())
+            .putBoolean(Prefs.KEY_AUTO_START, autoStartCheck.isChecked)
             .apply()
 
         statusText.text = getString(R.string.status_starting)

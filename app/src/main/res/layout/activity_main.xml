@@ -77,6 +77,13 @@
             android:inputType="textPassword"
             android:autofillHints="" />
 
+        <CheckBox
+            android:id="@+id/autoStartCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_auto_start" />
+
         <Button
             android:id="@+id/startButton"
             android:layout_width="match_parent"

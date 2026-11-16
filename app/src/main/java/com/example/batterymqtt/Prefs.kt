@@ -10,6 +10,7 @@ object Prefs {
     const val KEY_TOPIC = "topic"
     const val KEY_USER = "user"
     const val KEY_PASSWORD = "password"
+    const val KEY_AUTO_START = "auto_start"
 
     fun get(context: Context): SharedPreferences =
         context.getSharedPreferences(NAME, Context.MODE_PRIVATE)

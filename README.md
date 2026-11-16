@@ -10,6 +10,7 @@ Application Android d'exemple (Kotlin) qui publie le niveau de charge de la batt
 - Publication MQTT QoS 1 avec reconnexion automatique (bibliothèque Eclipse Paho).
 - La valeur publiée est un simple entier : `0` à `100`.
 - Configuration sauvegardée dans les préférences de l'app.
+- Option **Démarrer automatiquement en charge** : la publication démarre dès que le téléphone est branché, s'arrête au débranchement, et survit au redémarrage du téléphone.
 
 ## Build
 
