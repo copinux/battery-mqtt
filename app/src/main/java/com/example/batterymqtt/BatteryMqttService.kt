@@ -55,7 +55,7 @@ class BatteryMqttService : Service() {
         super.onDestroy()
     }
 
-    private fun runLoop() {
+    private suspend fun runLoop() {
         val prefs = Prefs.get(this)
         val broker = prefs.getString(Prefs.KEY_BROKER, "")?.trim().orEmpty()
         val port = prefs.getString(Prefs.KEY_PORT, "1883")?.trim().orEmpty().ifEmpty { "1883" }
@@ -75,7 +75,7 @@ class BatteryMqttService : Service() {
                 .also { it.connect() }
             sendStatus(getString(R.string.status_connected, serverUri))
 
-            while (kotlin.coroutines.coroutineContext.isActive) {
+            while (true) {
                 val level = readBatteryLevel()
                 if (level in 0..100) {
                     mqtt?.publish(topic, level.toString())

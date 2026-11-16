@@ -17,14 +17,13 @@ class MqttManager(
     fun connect() {
         if (client?.isConnected == true) return
         val c = MqttAsyncClient(serverUri, clientId, MemoryPersistence())
-        val options = MqttConnectOptions().apply {
-            isCleanSession = true
-            isAutomaticReconnect = true
-            connectionTimeout = 15
-            keepAliveInterval = 60
-            if (!username.isNullOrEmpty()) userName = username
-            if (!password.isNullOrEmpty()) password = password.toCharArray()
-        }
+        val options = MqttConnectOptions()
+        options.isCleanSession = true
+        options.isAutomaticReconnect = true
+        options.connectionTimeout = 15
+        options.keepAliveInterval = 60
+        if (!username.isNullOrEmpty()) options.userName = username
+        if (!password.isNullOrEmpty()) options.password = password.toCharArray()
         c.connect(options).waitForCompletion(20_000)
         client = c
     }
